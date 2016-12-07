@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
-import { example, p, link } from './styles';
+// import { example, p, link, login } from './styles';
 import RaisedButton from 'material-ui/RaisedButton';
 // import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -9,7 +9,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 // // http://stackoverflow.com/a/34015469/988941
 // injectTapEventPlugin();
 
-export default class Homepage extends Component {
+export default class Login extends Component {
   /*eslint-disable */
   static onEnter({store, nextState, replaceState, callback}) {
     // Load here any data.
@@ -18,8 +18,6 @@ export default class Homepage extends Component {
   /*eslint-enable */
 
   render() {
-    let loginLink = <Link to="login"/>;
-
     return <div>
       <Helmet
         title='Plog'
@@ -35,7 +33,7 @@ export default class Homepage extends Component {
         The only personal website service you'll need
       </p>
       <br />
-      <RaisedButton label="Log In" linkButton={true} onTouchTap={loginLink} />
+      <RaisedButton label="Log In" />
     </div>;
   }
 
